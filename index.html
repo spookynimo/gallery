@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spookynimo | Artgallery</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="/no-screenshot.js"></script>
+  </head>
+  <body onselectstart="return false;" onmousedown="return false;">
+  <header class="l-header p-header">
+    <div class="p-header__inner">
+      <h1 class="p-header__title"><a href="https://spookynimo.neocities.org/" >
+        Spookynimo
+      </a></h1>
+      <div class="p-header__hamburger">
+        <button class="c-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="p-header__nav p-nav">
+        <div class="p-nav__inner">
+          <ul class="p-nav__list">
+            <li class="p-nav__item">
+              <a href="https://spookynimo.neocities.org/" class="p-nav__link">
+                TOP
+              </a>
+            </li>
+            <li class="p-nav__item">
+              <a href="illustration.html" class="p-nav__link">
+                Illustration
+              </a>
+            </li>
+            <li class="p-nav__item">
+              <a href="art.html" class="p-nav__link">
+                Artgallery
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+  <section class="main-visual">
+  <video playsinline autoplay muted loop class="mv-video">
+  <source src="https://cdn.pixabay.com/video/2024/07/10/220506_large.mp4" type="video/mp4">
+</video>
+<img src="img/main.jpg" alt="haikei" class="mv-fallback">
+<div class="top-ttl">
+<div class="animate__animated animate__fadeInDown title-content"><h2>Never Fade Away</h2></div>
+</div>
+  </section>
+  <div class="inner">
+  <div class="main-content">
+    <h2 class="animate__animated animate__infinite animate__heartBeat">Welcome to my gallery!</h2>
+  </div>
+  <div class="item-content">
+    <h3>Gallery</h3>
+    <a class="item-btn" href="illustration.html">
+    <span class="item-txt">Illustration</span>
+    </a>
+    <a class="item-btn" href="art.html">
+    <span class="item-txt">Artgallery</span>
+    </a>
+  </div>
+  <div class="profile-content">
+    <h3>My profile</h3>
+    <figure><img class="noselect" src="img/IMG_6830.jpg" alt="im spookynimo"></figure>
+    <h4>Spookynimo</h4>
+    <p>Hi there,<br>
+    Thanks for stopping by!<br>
+    Feel free to take your time and look around.<br>Do not reupload may art.</p>
+    <p>来てくれてありがとうございます<br>大したものはないけど<br>無断転送はやめてくださいね</p>
+    <p>Mainvisual by <a href="https://pixabay.com/users/designscape-16406505/" target="_blank">DesignScape</a></p>
+  </div>
+  </div>
+  </main>
+  <script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('.mv-video');
+    const fallback = document.querySelector('.mv-fallback');
+
+    if (video) {
+      const tryPlay = video.play();
+      if (tryPlay !== undefined) {
+        tryPlay.catch(err => {
+          console.warn("動画の自動再生に失敗しました。画像に切り替えます。", err);
+          video.style.display = 'none';
+          fallback.style.display = 'block';
+        });
+      }
+    }
+  });
+</script>
+<footer>
+<div class="footer-content">
+<div class="inner">
+<p><a href="https://www.instagram.com/spookynimo_is_here?igsh=a2RxcWd4YXQ5bmFi&utm_source=qr" target="_blank">Instagram account</a></p>
+<p><a href="https://www.tumblr.com/spookynimo" target="_blank">tumbler account</a></p>
+</div>
+</div>
+<div class="copy">
+<p>Copyright© 2025 spookynimo</p>
+</div>
+</footer>
+  </body>
+</html>
